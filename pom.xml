@@ -22,7 +22,6 @@
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
-<<<<<<< HEAD
                 </configuration>
             </plugin>
 
@@ -35,8 +34,6 @@
                         <user.language>ru</user.language>
                         <user.region>RU</user.region>
                     </systemPropertyVariables>
-=======
->>>>>>> fc99c6a8356f4f8206d582f32ca8a4db204ae0c4
                 </configuration>
             </plugin>
         </plugins>
