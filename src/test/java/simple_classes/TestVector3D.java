@@ -3,6 +3,8 @@ package simple_classes;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.Locale;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 
@@ -144,6 +146,8 @@ public class TestVector3D {
     
     @Test
     public void testVector3DToString() {
+        Locale.setDefault(Locale.forLanguageTag("ru-RU"));
+        
         assertAll(
                 () -> assertEquals("Vector3D(1,0000; 2,0000; 3,0000)", new Vector3D(1, 2, 3).toString()),
                 () -> assertEquals("Vector3D(0,9876; 1,2999; 5,0000)", new Vector3D(.9876, 1.29985, 4.99996).toString())
