@@ -11,7 +11,7 @@ public class TestVector3DArray {
 
 
     @Test
-    public void TestVector3DArray() {
+    public void testVector3DArray() {
         Vector3DArray vArray = new Vector3DArray(5);
         Vector3D v0 = new Vector3D();
 
@@ -23,7 +23,7 @@ public class TestVector3DArray {
 
 
     @Test
-    public void TestVector3DArrayExceptions() {
+    public void testVector3DArrayExceptions() {
         Vector3DArray vArray = new Vector3DArray(5);
 
         assertAll(
@@ -37,7 +37,7 @@ public class TestVector3DArray {
 
 
     @Test
-    public void TestVector3DArraySetVector1() {
+    public void testVector3DArraySetVector1() {
         Vector3DArray vArray = new Vector3DArray(5);
         Vector3D v0 = new Vector3D();
 
@@ -59,7 +59,7 @@ public class TestVector3DArray {
 
 
     @Test
-    public void TestVector3DArraySetVector2() {
+    public void testVector3DArraySetVector2() {
         Vector3DArray vArray = new Vector3DArray(5);
         Vector3D v0 = new Vector3D();
 
@@ -74,13 +74,13 @@ public class TestVector3DArray {
                 () -> assertEquals(v0, vArray.getVector(4)),
                 () -> assertThrows(IllegalArgumentException.class, () -> vArray.setVector(-1, v0)),
                 () -> assertThrows(IllegalArgumentException.class, () -> vArray.setVector(5, v0)),
-                () -> assertThrows(IllegalArgumentException.class, () -> vArray.setVector(-1, (Vector3D) null))
+                () -> assertThrows(IllegalArgumentException.class, () -> vArray.setVector(-1, null))
         );
     }
 
 
     @Test
-    public void TestVector3DArrayGetMaxVectorLength() {
+    public void testVector3DArrayGetMaxVectorLength() {
         Vector3DArray vArray1 = new Vector3DArray(5);
         Vector3DArray vArray2 = new Vector3DArray(2);
 
@@ -99,7 +99,7 @@ public class TestVector3DArray {
 
 
     @Test
-    public void TestVector3DArrayFindVector() {
+    public void testVector3DArrayFindVector() {
         Vector3DArray vArray = new Vector3DArray(5);
 
         vArray.setVector(0, 1, 0, 0);
@@ -114,13 +114,13 @@ public class TestVector3DArray {
                 () -> assertEquals(3, vArray.findVector(new Vector3D())),
                 () -> assertEquals(4, vArray.findVector(new Vector3D(2, 3.1, 6.323))),
                 () -> assertEquals(-1, vArray.findVector(new Vector3D(1, 1, 1))),
-                () -> assertEquals(-1, vArray.findVector((Vector3D) null))
+                () -> assertEquals(-1, vArray.findVector(null))
         );
     }
 
 
     @Test
-    public void TestVector3DArraySumAllVectors() {
+    public void testVector3DArraySumAllVectors() {
         Vector3DArray vArray = new Vector3DArray(5);
 
         vArray.setVector(0, 1, 0, 0);
@@ -138,7 +138,7 @@ public class TestVector3DArray {
 
 
     @Test
-    public void TestVector3DArrayLinCombination() {
+    public void testVector3DArrayLinCombination() {
         Vector3DArray vArray = new Vector3DArray(5);
         double[] coefficients1 = {1, 2, 1.5, 1, 10};
         double[] coefficients2 = {2, 0.5, -3, 11, 0};
@@ -168,7 +168,7 @@ public class TestVector3DArray {
 
 
     @Test
-    public void TestVector3DArrayMovePoint() {
+    public void testVector3DArrayMovePoint() {
         Vector3DArray vArray = new Vector3DArray(3);
         Point3D point = new Point3D(-2, 2.4, -0.5);
         Point3D[] pointArray = new Point3D[3], pointArrayRes;
@@ -186,7 +186,7 @@ public class TestVector3DArray {
                 () -> assertEquals(pointArrayRes[0], pointArray[0]),
                 () -> assertEquals(pointArrayRes[1], pointArray[1]),
                 () -> assertEquals(pointArrayRes[2], pointArray[2]),
-                () -> assertThrows(IllegalArgumentException.class, () -> vArray.movePoint((Point3D) null))
+                () -> assertThrows(IllegalArgumentException.class, () -> vArray.movePoint(null))
         );
 
         vArray.setVector(1, 0, Double.MAX_VALUE, 0);

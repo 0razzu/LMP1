@@ -1,9 +1,6 @@
 package simple_classes;
 
 
-import java.util.Objects;
-
-
 public class Point3D {
     private double x, y, z;
 

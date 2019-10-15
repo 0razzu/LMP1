@@ -45,7 +45,7 @@ public class TestPoint3D {
 
 
     @Test
-    public void testPoint3DSetCoodinates() {
+    public void testPoint3DSetCoordinates() {
         Point3D point = new Point3D();
 
         point.setX(10);
@@ -136,7 +136,7 @@ public class TestPoint3D {
                 () -> assertNotEquals(point1, point4),
                 () -> assertNotEquals(point1, point5),
                 () -> assertNotEquals(point1, point6),
-                () -> assertNotEquals(point5, (Point3D) null),
+                () -> assertNotEquals(point5, null),
                 () -> assertNotEquals(point6, "")
         );
     }
