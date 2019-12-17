@@ -13,7 +13,7 @@ public class TestVector3D {
 
 
     @Test
-    public void testVector3D1() {
+    void testVector3D1() {
         Vector3D v1 = new Vector3D(1.1, -2.3, 3.99);
         Vector3D v2 = new Vector3D(0, 0, 0);
 
@@ -29,7 +29,7 @@ public class TestVector3D {
 
 
     @Test
-    public void testVector3D1Exceptions() {
+    void testVector3D1Exceptions() {
         assertAll(
         () -> assertThrows(IllegalArgumentException.class, () -> new Vector3D(Double.POSITIVE_INFINITY, 0, 0)),
         () -> assertThrows(IllegalArgumentException.class, () -> new Vector3D(Double.NEGATIVE_INFINITY, 0, 0)),
@@ -45,7 +45,7 @@ public class TestVector3D {
 
 
     @Test
-    public void testVector3D2() {
+    void testVector3D2() {
         Vector3D v = new Vector3D(100, -2.1, 0.71, 96.5, 0.1, -3);
 
         assertAll(
@@ -63,7 +63,7 @@ public class TestVector3D {
 
 
     @Test
-    public void testVector3D3() {
+    void testVector3D3() {
         Vector3D v = new Vector3D(new Point3D(-21, 2.1, 5.4), new Point3D(-20, 2.123, -0.6));
 
         assertAll(
@@ -88,7 +88,7 @@ public class TestVector3D {
 
 
     @Test
-    public void testVector3D4() {
+    void testVector3D4() {
         Vector3D v = new Vector3D();
 
         assertAll(
@@ -100,7 +100,7 @@ public class TestVector3D {
 
 
     @Test
-    public void testVector3DSetCoordinates() {
+    void testVector3DSetCoordinates() {
         Vector3D v = new Vector3D(1, 2, 3);
 
         v.setX(0.7);
@@ -116,7 +116,7 @@ public class TestVector3D {
 
 
     @Test
-    public void testVector3DLength() {
+    void testVector3DLength() {
         assertAll(
                 () -> assertEquals(8.6, new Vector3D(5, 6, 3.6).length(), EPS),
                 () -> assertEquals(5, new Vector3D(3, 4, 0).length(), EPS),
@@ -129,7 +129,7 @@ public class TestVector3D {
 
 
     @Test
-    public void testVector3DMultiplyBy() {
+    void testVector3DMultiplyBy() {
         Vector3D v1 = new Vector3D(1, 2, 3);
         Vector3D v2 = new Vector3D(-1, 0, 2.5);
         Vector3D v3 = new Vector3D(Double.MAX_VALUE, 1, 2);
@@ -145,7 +145,7 @@ public class TestVector3D {
     
     
     @Test
-    public void testVector3DToString() {
+    void testVector3DToString() {
         Locale.setDefault(Locale.forLanguageTag("ru-RU"));
         
         assertAll(
@@ -156,7 +156,7 @@ public class TestVector3D {
 
 
     @Test
-    public void testVector3DEquals() {
+    void testVector3DEquals() {
         Vector3D v1 = new Vector3D();
         Vector3D v2 = new Vector3D(0, 0, 0);
         Vector3D v3 = null;

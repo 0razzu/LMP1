@@ -11,7 +11,7 @@ public class TestSafeOperations {
 
 
     @Test
-    public void testSafeOperationsSum() {
+    void testSafeOperationsSum() {
         assertAll(
                 () -> assertEquals(20, SafeOperations.sum(9.5, 10.5), EPS),
                 () -> assertEquals(10, SafeOperations.sum(-1.5, 11.5), EPS),
@@ -21,7 +21,7 @@ public class TestSafeOperations {
 
 
     @Test
-    public void testSafeOperationsSumExceptions() {
+    void testSafeOperationsSumExceptions() {
         assertAll(
                 () -> {assertThrows(ArithmeticException.class, () -> SafeOperations.sum(Double.NaN, 0));},
                 () -> {assertThrows(ArithmeticException.class, () -> SafeOperations.sum(0, Double.NaN));},
@@ -38,7 +38,7 @@ public class TestSafeOperations {
 
 
     @Test
-    public void testSafeOperationsDiff() {
+    void testSafeOperationsDiff() {
         assertAll(
                 () -> assertEquals(-1, SafeOperations.diff(9.5, 10.5), EPS),
                 () -> assertEquals(-13, SafeOperations.diff(-1.5, 11.5), EPS),
@@ -48,7 +48,7 @@ public class TestSafeOperations {
 
 
     @Test
-    public void testSafeOperationsDiffExceptions() {
+    void testSafeOperationsDiffExceptions() {
         assertAll(
                 () -> {assertThrows(ArithmeticException.class, () -> SafeOperations.diff(Double.NaN, 0));},
                 () -> {assertThrows(ArithmeticException.class, () -> SafeOperations.diff(0, Double.NaN));},
@@ -65,7 +65,7 @@ public class TestSafeOperations {
 
 
     @Test
-    public void testSafeOperationsMul() {
+    void testSafeOperationsMul() {
         assertAll(
                 () -> assertEquals(100, SafeOperations.mul(75, 4./3), EPS),
                 () -> assertEquals(-11, SafeOperations.mul(-5, 2.2), EPS),
@@ -75,7 +75,7 @@ public class TestSafeOperations {
 
 
     @Test
-    public void testSafeOperationsMulExceptions() {
+    void testSafeOperationsMulExceptions() {
         assertAll(
                 () -> {assertThrows(ArithmeticException.class, () -> SafeOperations.mul(Double.NaN, 0));},
                 () -> {assertThrows(ArithmeticException.class, () -> SafeOperations.mul(0, Double.NaN));},
@@ -90,7 +90,7 @@ public class TestSafeOperations {
 
 
     @Test
-    public void testSafeOperationsDiv() {
+    void testSafeOperationsDiv() {
         assertAll(
                 () -> assertEquals(2.5, SafeOperations.div(10, 4), EPS),
                 () -> assertEquals(-9, SafeOperations.div(81, -9), EPS),
@@ -100,7 +100,7 @@ public class TestSafeOperations {
 
 
     @Test
-    public void testSafeOperationsDivExceptions() {
+    void testSafeOperationsDivExceptions() {
         assertAll(
                 () -> {assertThrows(ArithmeticException.class, () -> SafeOperations.div(1, 0));},
                 () -> {assertThrows(ArithmeticException.class, () -> SafeOperations.div(Double.NaN, 1));},

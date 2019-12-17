@@ -11,7 +11,7 @@ public class TestVector3DArray {
 
 
     @Test
-    public void testVector3DArray() {
+    void testVector3DArray() {
         Vector3DArray vArray = new Vector3DArray(5);
         Vector3D v0 = new Vector3D();
 
@@ -23,7 +23,7 @@ public class TestVector3DArray {
 
 
     @Test
-    public void testVector3DArrayExceptions() {
+    void testVector3DArrayExceptions() {
         Vector3DArray vArray = new Vector3DArray(5);
 
         assertAll(
@@ -37,7 +37,7 @@ public class TestVector3DArray {
 
 
     @Test
-    public void testVector3DArraySetVector1() {
+    void testVector3DArraySetVector1() {
         Vector3DArray vArray = new Vector3DArray(5);
         Vector3D v0 = new Vector3D();
 
@@ -59,7 +59,7 @@ public class TestVector3DArray {
 
 
     @Test
-    public void testVector3DArraySetVector2() {
+    void testVector3DArraySetVector2() {
         Vector3DArray vArray = new Vector3DArray(5);
         Vector3D v0 = new Vector3D();
 
@@ -80,7 +80,7 @@ public class TestVector3DArray {
 
 
     @Test
-    public void testVector3DArrayGetMaxVectorLength() {
+    void testVector3DArrayGetMaxVectorLength() {
         Vector3DArray vArray1 = new Vector3DArray(5);
         Vector3DArray vArray2 = new Vector3DArray(2);
 
@@ -99,7 +99,7 @@ public class TestVector3DArray {
 
 
     @Test
-    public void testVector3DArrayFindVector() {
+    void testVector3DArrayFindVector() {
         Vector3DArray vArray = new Vector3DArray(5);
 
         vArray.setVector(0, 1, 0, 0);
@@ -120,7 +120,7 @@ public class TestVector3DArray {
 
 
     @Test
-    public void testVector3DArraySumAllVectors() {
+    void testVector3DArraySumAllVectors() {
         Vector3DArray vArray = new Vector3DArray(5);
 
         vArray.setVector(0, 1, 0, 0);
@@ -138,7 +138,7 @@ public class TestVector3DArray {
 
 
     @Test
-    public void testVector3DArrayLinCombination() {
+    void testVector3DArrayLinCombination() {
         Vector3DArray vArray = new Vector3DArray(5);
         double[] coefficients1 = {1, 2, 1.5, 1, 10};
         double[] coefficients2 = {2, 0.5, -3, 11, 0};
@@ -168,7 +168,7 @@ public class TestVector3DArray {
 
 
     @Test
-    public void testVector3DArrayMovePoint() {
+    void testVector3DArrayMovePoint() {
         Vector3DArray vArray = new Vector3DArray(3);
         Point3D point = new Point3D(-2, 2.4, -0.5);
         Point3D[] pointArray = new Point3D[3], pointArrayRes;

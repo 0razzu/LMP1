@@ -13,7 +13,7 @@ public class TestPoint3D {
 
 
     @Test
-    public void testPoint3D() {
+    void testPoint3D() {
         Point3D point1 = new Point3D(-1, 2, 3);
         Point3D point2 = new Point3D();
 
@@ -29,7 +29,7 @@ public class TestPoint3D {
 
 
     @Test
-    public void testPoint3DExceptions() {
+    void testPoint3DExceptions() {
         assertAll(
                 () -> assertThrows(IllegalArgumentException.class, () -> new Point3D(Double.POSITIVE_INFINITY, 0, 0)),
                 () -> assertThrows(IllegalArgumentException.class, () -> new Point3D(Double.NEGATIVE_INFINITY, 0, 0)),
@@ -45,7 +45,7 @@ public class TestPoint3D {
 
 
     @Test
-    public void testPoint3DSetCoordinates() {
+    void testPoint3DSetCoordinates() {
         Point3D point = new Point3D();
 
         point.setX(10);
@@ -71,7 +71,7 @@ public class TestPoint3D {
 
 
     @Test
-    public void testPoint3DMoveTo() {
+    void testPoint3DMoveTo() {
         Point3D point = new Point3D(10, 30, 50);
 
         point.moveTo(2, 3, 5);
@@ -85,7 +85,7 @@ public class TestPoint3D {
 
 
     @Test
-    public void testPoint3DMoveRel1() {
+    void testPoint3DMoveRel1() {
         Point3D point = new Point3D(1, 8, 4);
 
         point.moveRel(10, -15, 1.2);
@@ -99,7 +99,7 @@ public class TestPoint3D {
 
 
     @Test
-    public void testPoint3DMoveRel2() {
+    void testPoint3DMoveRel2() {
         Point3D point = new Point3D(Double.MAX_VALUE, -Double.MAX_VALUE, 0);
 
         assertAll(
@@ -110,7 +110,7 @@ public class TestPoint3D {
     
     
     @Test
-    public void testPoint3DToString() {
+    void testPoint3DToString() {
         Locale.setDefault(Locale.forLanguageTag("ru-RU"));
         
         assertAll(
@@ -121,7 +121,7 @@ public class TestPoint3D {
 
 
     @Test
-    public void testPoint3DEquals() {
+    void testPoint3DEquals() {
         Point3D point1 = new Point3D();
         Point3D point2 = new Point3D(0, 0, 0);
         Point3D point3 = point2;

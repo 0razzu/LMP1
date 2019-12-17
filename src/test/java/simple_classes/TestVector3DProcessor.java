@@ -11,7 +11,7 @@ public class TestVector3DProcessor {
 
 
     @Test
-    public void testVector3DProcessorSum() {
+    void testVector3DProcessorSum() {
         Vector3D v1 = new Vector3D(1, 2, -5);
         Vector3D v2 = new Vector3D(2.5, -3, 11);
         Vector3D v3 = new Vector3D(1.5, -1.3, -10.5);
@@ -29,7 +29,7 @@ public class TestVector3DProcessor {
 
 
     @Test
-    public void testVector3DProcessorDiff() {
+    void testVector3DProcessorDiff() {
         Vector3D v1 = new Vector3D(1, 2, -5);
         Vector3D v2 = new Vector3D(2.5, -3, 11);
         Vector3D v3 = new Vector3D(1.5, -1.3, -10.5);
@@ -48,7 +48,7 @@ public class TestVector3DProcessor {
 
 
     @Test
-    public void testVector3DProcessorScalarProduct() {
+    void testVector3DProcessorScalarProduct() {
         Vector3D v1 = new Vector3D(1, 2, -5);
         Vector3D v2 = new Vector3D(2.5, -3, 11);
         Vector3D v3 = new Vector3D(1.5, -1.3, -10.5);
@@ -66,7 +66,7 @@ public class TestVector3DProcessor {
 
 
     @Test
-    public void testVector3DProcessorVectorProduct() {
+    void testVector3DProcessorVectorProduct() {
         Vector3D v1 = new Vector3D(1, 2, -5);
         Vector3D v2 = new Vector3D(2.5, -3, 11);
         Vector3D v3 = new Vector3D(1.5, -1.3, -10.5);
@@ -85,7 +85,7 @@ public class TestVector3DProcessor {
 
 
     @Test
-    public void testVector3DProcessorAreCollinear() {
+    void testVector3DProcessorAreCollinear() {
         Vector3D v1 = new Vector3D(1, 2, -5);
         Vector3D v2 = new Vector3D(2.5, 3.5, -3.5);
         Vector3D v3 = new Vector3D(2, 4, -10);
