@@ -1,6 +1,3 @@
-package array_processor;
-
-
 import java.io.IOException;
 import java.util.Scanner;
 
