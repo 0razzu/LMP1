@@ -6,7 +6,7 @@
 
     <groupId>0razzu</groupId>
     <artifactId>ArrayProcessor</artifactId>
-    <version>2.0-CONSOLE-IFACE</version>
+    <version>2.1-CONSOLE-IFACE</version>
     <packaging>jar</packaging>
 
     <properties>
