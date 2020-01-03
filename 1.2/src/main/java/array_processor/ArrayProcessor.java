@@ -1,8 +1,11 @@
+package array_processor;
+
+
 import java.io.IOException;
 import java.util.Scanner;
 
 
-public class ArrayFunctions {
+public class ArrayProcessor {
     public static void printArray(int[] array) {
         for (int a: array)
             System.out.print(a + " ");
